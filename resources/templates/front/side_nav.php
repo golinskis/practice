@@ -10,7 +10,7 @@ if(!$send_query)
 }
         while ($row = mysqli_fetch_row($send_query))
         {
-            echo "<a href='category.html' class='list-group-item'>{{$row['cat_title']}}</a>";
+            echo "<a href='category.html' class='list-group-item'> {$row['cat_title']}</a>";
         }
 
         ?>
