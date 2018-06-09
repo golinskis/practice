@@ -16,12 +16,26 @@
 
 
 
-            $sql = "SELECT * FROM users WHERE id=1";
+            $resultSet = User::findAllUsers();
 
-            $result = $database->query($sql);
-            $userFound = mysqli_fetch_array($result);
-            echo $userFound['username'];
+            while($row = mysqli_fetch_array($resultSet)){
 
+                echo $row['username'] . "<br>";
+            }
+
+
+
+//
+//            $foundUser = User::findUser(2);
+//            $user = new User();
+//            $user->setUsername($foundUser['username'])->setId($foundUser['id'])->setFirstName($foundUser['first_name'])->setLastName($foundUser['last_name'])->setPassword($foundUser['password']);
+//           var_export($user);
+//
+//
+//            $foundUser = User::findUser(1);
+//            $user1 = User::instantion($foundUser);
+//
+//            var_export($user1);
 
 
 

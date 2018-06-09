@@ -33,7 +33,7 @@ class Database
     public function query($sql)
     {
         $result = $this->connection->query($sql);
-
+        $this->confirmQuery($result);
         return $result;
     }
 
