@@ -1,6 +1,6 @@
 <?php
 
-//Database Connection Constants
+//database Connection Constants
 
 
 define("DB_HOST","localhost");

@@ -1,4 +1,6 @@
 <?php
+require_once ("functions.php");
 include("new_config.php");
-include("Database.php");
-include("User.php");
+include("database.php");
+include("user.php");
+include("session.php");

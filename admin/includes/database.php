@@ -1,13 +1,13 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: szymongolinski
+ * user: szymongolinski
  * Date: 08.06.2018
  * Time: 23:42
  */
 require_once ("new_config.php");
 
-class Database
+class database
 {
     public $connection; // tworzenie prywatnej własnoci
 
@@ -24,7 +24,7 @@ class Database
         $this->connection = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
         if($this->connection->connect_errno){
-            die("Database connection failed badly" . $this->connection->connect_error());
+            die("database connection failed badly" . $this->connection->connect_error());
         }
     }
 
@@ -58,5 +58,5 @@ class Database
 
 }
 
-$database = new Database(); // nowy obiekt db
+$database = new database(); // nowy obiekt db
 

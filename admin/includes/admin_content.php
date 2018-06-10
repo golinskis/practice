@@ -14,30 +14,42 @@
 
             <?php
 
+//
+//
+//            $resultSet = user::findAllUsers();
+//
+//            while($row = mysqli_fetch_array($resultSet)){
+//
+//                echo $row['username'] . "<br>";
+//            }
 
 
-            $resultSet = User::findAllUsers();
-
-            while($row = mysqli_fetch_array($resultSet)){
-
-                echo $row['username'] . "<br>";
-            }
-
-
+//            $users = user::findAllUsers();
+//
+//            foreach ($users as $user)
+//            {
+//                echo $user->id . "<br>";
+//            }
 
 //
-//            $foundUser = User::findUser(2);
-//            $user = new User();
+//            $foundUser = user::findUser(2);
+//            $user = new user();
 //            $user->setUsername($foundUser['username'])->setId($foundUser['id'])->setFirstName($foundUser['first_name'])->setLastName($foundUser['last_name'])->setPassword($foundUser['password']);
 //           var_export($user);
 //
 //
-//            $foundUser = User::findUser(1);
-//            $user1 = User::instantion($foundUser);
+//            $foundUser = user::findUser(1);
+//            $user1 = user::instantion($foundUser);
 //
 //            var_export($user1);
 
 
+            $foundUser = user::findUserById(2);
+            echo  $foundUser ->username;
+
+
+
+            $bmw  = new Car();
 
             ?>
 
