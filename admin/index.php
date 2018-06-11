@@ -1,4 +1,15 @@
 <?php include("includes/header.php"); ?>
+<?php
+
+if(!$session->isSignedIn()){ // jesli nie jest zalogowany przekierwouje na strone logowania
+
+    redirect("login.php"); // odwolanie do funkcji przekierowujacej
+}
+
+
+
+?>
+
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

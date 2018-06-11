@@ -176,5 +176,19 @@ return $this->username;
 }
 
 
+public static function verifyUser($username,$password)
+{   global $database;
+
+    $username = $database->escapeString($username);
+    $password = $database->escapeString($password);
+
+
+    $foundedUserArray = self::findThisQuery("SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}' LIMIT 1");
+
+
+    return !empty($foundedUserArray) ? array_shift($foundedUserArray) : false;
+}
+
+
 
 }
